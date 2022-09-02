@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тестовое задание Казакова Я.</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/script.js"></script>
+</head>
+
+<body onload="changeMaxDate();">
+    <form oninput="checkValidation();">
+        <div class="inputBox">
+            <p>Имя</p>
+            <div class="firstnameBox" id="firstnameBox">
+                <input type="text" id="firstname" oninput="changeFirstName(this.value);" maxlength="30">
+                <label for="firstname" class="boxLabel" id="firstnameLabel" hidden="hidden">Имя должно содержать только
+                    буквы.</label>
+            </div>
+            <p class="sucessfull" id="firstnameBoxSucess">✓</p>
+
+            <p>Фамилия</p>
+            <div class="lastnameBox" id="lastnameBox">
+                <input type="text" id="lastname" oninput="changeLastName(this.value);" maxlength="50">
+                <label for="lastname" class="boxLabel" id="lastnameLabel" hidden="hidden">Фамилия должна содержать
+                    только буквы.</label>
+            </div>
+            <p class="sucessfull" id="lastnameBoxSucess">✓</p>
+
+            <p>Электронная почта</p>
+            <div class="emailBox" id="emailBox">
+                <input type="email" id="email" oninput="changeEmail(this.value);">
+                <label for="email" class="boxLabel" id="emailLabel" hidden="hidden">Электронная почта должна быть в
+                    формате <b>something@something.something</b></label>
+            </div>
+            <p class="sucessfull" id="emailBoxSucess">✓</p>
+
+            <p>Пароль</p>
+            <div class="passBox" id="passBox">
+                <input type="password" id="pass" oninput="changePass(this.value);">
+                <label for="pass" class="boxLabel" id="labelPassLength" hidden="hidden">Пароль должен содержать не менее
+                    8 символов</label>
+                <label for="pass" class="boxLabel" id="labelPassNum" hidden="hidden">Пароль должен содержать хотя бы
+                    одну
+                    цифру</label>
+                <label for="pass" class="boxLabel" id="labelPassLowercase" hidden="hidden">Пароль должен содержать
+                    хотя бы одну строчную букву</label>
+                <label for="pass" class="boxLabel" id="labelPassCursive" hidden="hidden">Пароль должен содержать хотя бы
+                    одну прописную букву</label>
+                <label for="pass" class="boxLabel" id="labelPassSymbol" hidden="hidden">Пароль должен содержать хотя бы
+                    один символ</label>
+            </div>
+            <p class="sucessfull" id="passBoxSucess">✓</p>
+
+            <p>Повторите пароль</p>
+            <div class="confPassBox" id="confPassBox">
+                <input type="password" id="confPass" oninput="changeConfPass(this.value);">
+                <label for="confPass" class="boxLabel" id="labelConfPass" hidden="hidden">Пароли должны
+                    совпадать</label>
+            </div>
+            <p class="sucessfull" id="confPassBoxSucess">✓</p>
+
+            <p>Дата рождения</p>
+            <div class="birthdayBox" id="birthdayBox">
+                <input type="date" id="birthday" oninput="changeBirthday(this.value);">
+                <label for="birthday" class="boxLabel" id="labelBirthday" hidden="hidden">Ваш возраст должен быть больше
+                    18 лет</label>
+            </div>
+            <p class="sucessfull" id="birthdayBoxSucess">✓</p>
+        </div>
+        <div class="btnBox">
+            <input type="submit" value="Отправить" class="submitBtn" id="submitBtn" disabled>
+        </div>
+    </form>
+</body>
+
+</html>
